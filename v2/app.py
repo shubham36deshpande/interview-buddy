@@ -12,7 +12,7 @@ UPLOAD_FOLDER = 'uploads/'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Set your Gemini API key (replace with your actual key)
-os.environ["GOOGLE_API_KEY"] = "AIzaSyAm9uEdd5XcVs_oj6Vuh_bECM3pTPXvNco"  # Replace with your actual Gemini API key
+os.environ["GOOGLE_API_KEY"] = ""  # Replace with your actual Gemini API key
 genai.configure(api_key=os.environ["GOOGLE_API_KEY"])
 
 @app.route("/")
