@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Buddy - Upload Your Resume</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">
+                <i class="fas fa-user-tie"></i>
+                Interview Buddy
+            </div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index') }}" class="active">Upload Resume</a></li>
+                <li><a href="{{ url_for('ask_question') }}">Interview Terminal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="content">
+            <h1>Upload Your Resume</h1>
+            <p>Let's start by analyzing your resume to personalize your interview experience.</p>
+            <div class="upload-area">
+                <input type="file" id="resume-upload" name="resume" accept=".doc,.docx" hidden>
+                <label for="resume-upload" class="upload-button">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    Choose File
+                </label>
+                <p id="file-name">No file chosen</p>
+            </div>
+            <button id="submit-resume" class="btn btn-primary" disabled>
+                <i class="fas fa-paper-plane"></i>
+                Upload Resume
+            </button>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Sanco Foundation. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

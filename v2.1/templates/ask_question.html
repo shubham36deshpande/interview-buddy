@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Buddy - Interview Terminal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">Interview Buddy</div>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index') }}">Upload Resume</a></li>
+                <li><a href="{{ url_for('ask_question') }}" class="active">Interview Terminal</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container" role="main">
+        <section class="content">
+            <div class="interview-box">
+                <div id="speech-output" class="output-box">
+                    <p class="placeholder">Your speech will appear here...</p>
+                </div>
+
+                <div class="controls-box">
+                    <button id="start-stop-listening" class="btn btn-primary">Start Listening</button>
+                </div>
+
+                <div id="response-output" class="response-box">
+                    <p class="placeholder">AI feedback will appear here...</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Sanco Foundation. All rights reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

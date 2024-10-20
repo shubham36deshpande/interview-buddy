@@ -1,0 +1,7 @@
+Flask
+flask-cors
+google-generativeai
+SpeechRecognition
+pyaudio
+werkzeug
+python-docx
